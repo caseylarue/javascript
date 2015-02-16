@@ -1,0 +1,62 @@
+======================
+Arrays
+======================
+
+var arr = [3, 6];
+arr[234] = "hi";
+//
+console.log( arr.length ); // 235
+console.log( arr[34] ); // undefined
+
+======================
+Objects
+======================
+
+var dojo = { }; //creates an empty object
+dojo = {
+  name: 'Coding Dojo',     //property can store a string
+  number_of_students: 25,    //property can store a number
+  instructors: ['Randall', 'Eylem', 'Dexter'],   //property can store arrays
+  location: {   //property can even store another object!
+    city: 'Mountain View',
+    state: 'CA',
+    zipcode: 94043
+  }
+}
+//
+//you can access each property of the object by using the dot (.) notation
+console.log(dojo.name, dojo.number_of_students, dojo.instructors, dojo.location);
+//
+//changing some values
+dojo.number_of_students = 30;
+dojo.location.city = 'Bellevue';
+dojo.location.state = 'WA';
+dojo.location.zipcode = 98006;
+//
+//another way to change the location
+dojo.location = { city: 'Bellevue', state: 'WA', zipcode: 98006 };
+//
+//you can create a new property and store a value there by also using dot notation
+dojo.phone_number = '123-345-677';
+
+======================
+Loops
+======================
+
+//you can also use a for in loop which is similar to the foreach loop in PHP
+for ( index in my_array ) {
+   console.log( my_array[index] );
+}
+
+//you can loop through an object using for methods as well
+var person = { name: "Dexter", email: "dclark@codingdojo.co" };
+for ( prop in person ) {           // prop will be the key
+      console.log( person[prop] );  // alternative syntax to above line
+}
+
+var sample_array = [ 4, 6, 8, 234, "some words"];
+var counter = 0;
+while ( sample_array[counter] !== undefined ) {
+ console.log( sample_array[counter] );
+ counter++;
+}
