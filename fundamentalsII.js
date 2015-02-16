@@ -20,20 +20,45 @@ var person = {
       console.log(this.name + " is crawling " + this.distance_traveled);
 	},
     doSomething: function() {
-//       var arr = [this.walk, this.run, this.crawl];
       var rand = Math.floor( Math.random() * 3 );
       switch (rand) {
         case 0: 
           return this.walk();
-          break;
         case 1:
           return this.run();
-          break;
         case 2:
           return this.crawl();
-          break;
         }
+     },
+     fly: function() {
+     	var prob = Math.random() * (1.01);
+     	if(prob >= 0.70) {
+     		alert("You can fly!");
+            x();
+     	}
+     	else {
+     		alert("No flying today");
+            y();
+     	}
      }
 };
 
-var returned_function = person.doSomething(); 
+var x = function() { alert('eating ice cream!'); }; 
+var y = function() { alert('crying at home...'); };
+person.fly(x,y);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
