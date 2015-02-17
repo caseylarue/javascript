@@ -60,3 +60,16 @@ while ( sample_array[counter] !== undefined ) {
  console.log( sample_array[counter] );
  counter++;
 }
+
+======================
+Callbacks
+======================
+
+function mySandwich(a, b, callback ) {
+  alert('started eating my sandwich. \n\n It has ' + a + ', ' + b);
+  callback();
+}
+
+mySandwich('tuna', 'tomato', function() {
+  alert('Finished eating my sandwich!');
+});
